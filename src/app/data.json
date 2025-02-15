@@ -1,0 +1,1726 @@
+{
+  "questions": [
+    {
+      "id": "L1_Q1",
+      "lecture": 1,
+      "question": "What is the main purpose of graph traversal algorithms?",
+      "choices": [
+        "To delete edges in a graph",
+        "To visit all vertices and edges of a graph",
+        "To compute the determinant of an adjacency matrix",
+        "To find the heaviest edge in a weighted graph"
+      ],
+      "correctAnswer": "To visit all vertices and edges of a graph",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q2",
+      "lecture": 1,
+      "question": "What data structure does BFS use to store nodes to be explored?",
+      "choices": [
+        "Stack",
+        "List",
+        "Queue",
+        "Heap"
+      ],
+      "correctAnswer": "Queue",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q3",
+      "lecture": 1,
+      "question": "What is the time complexity of BFS on a graph with n vertices and m edges?",
+      "choices": [
+        "O(mn)",
+        "O(n)",
+        "O(m + n)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(m + n)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q4",
+      "lecture": 1,
+      "question": "In BFS, what happens when a vertex v is dequeued?",
+      "choices": [
+        "It is removed from the graph permanently",
+        "Its neighbors are checked and enqueued if not visited",
+        "It is marked as a cycle node",
+        "A new edge is added"
+      ],
+      "correctAnswer": "Its neighbors are checked and enqueued if not visited",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q5",
+      "lecture": 1,
+      "question": "How many times is an undirected edge stored in an adjacency list?",
+      "choices": [
+        "1",
+        "2",
+        "More than 2",
+        "It depends on the number of neighbors"
+      ],
+      "correctAnswer": "2",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q6",
+      "lecture": 1,
+      "question": "What does d(v) represent in the context of shortest paths?",
+      "choices": [
+        "The number of times v appears in the graph",
+        "The shortest path distance from the source s to v",
+        "The maximum path length in the graph",
+        "The number of outgoing edges from v"
+      ],
+      "correctAnswer": "The shortest path distance from the source s to v",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q7",
+      "lecture": 1,
+      "question": "Which of the following statements is true about BFS?",
+      "choices": [
+        "It guarantees the shortest path in an unweighted graph",
+        "It works only on directed graphs",
+        "It cannot detect cycles",
+        "It runs in O(n^2) time complexity"
+      ],
+      "correctAnswer": "It guarantees the shortest path in an unweighted graph",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L1_Q8",
+      "lecture": 1,
+      "question": "What is the condition for updating the shortest path distance in BFS?",
+      "choices": [
+        "If the current vertex has more edges than the previous one",
+        "If d(u) ≤ d(v) + 1 for every edge (u,v)",
+        "If v has been visited an odd number of times",
+        "If the graph is weighted"
+      ],
+      "correctAnswer": "If d(u) ≤ d(v) + 1 for every edge (u,v)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q1",
+      "lecture": 2,
+      "question": "1) Which of the following statements is part of the BFS Theorem (Undirected) as stated in the lecture slides?",
+      "choices": [
+        "A) If visited[v] = True, then there must be a path from s to v.",
+        "B) pred[v] = v if there is a path from s to v.",
+        "C) For any vertex v, pred[v] is always non-null.",
+        "D) For v connected to s, the path v → pred[v] → pred[pred[v]] → ... → s has arbitrary length."
+      ],
+      "correctAnswer": "A) If visited[v] = True, then there must be a path from s to v.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q2",
+      "lecture": 2,
+      "question": "2) According to the BFS Theorem, what is the significance of pred[v] = null?",
+      "choices": [
+        "A) It indicates v is part of a cycle.",
+        "B) It indicates v = s or v is not connected to s.",
+        "C) It indicates v is visited multiple times.",
+        "D) It indicates v has infinite distance from s."
+      ],
+      "correctAnswer": "B) It indicates v = s or v is not connected to s.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q3",
+      "lecture": 2,
+      "question": "3) Which of the following is the correct interpretation of the loop invariant used in the BFS proof?",
+      "choices": [
+        "A) All vertices in the queue have distance 0 or 1, and all other vertices have infinite distance.",
+        "B) At the beginning of the i-th iteration, the queue Q may contain vertices of any distance from s.",
+        "C) At the beginning of the i-th iteration, all vertices in Q have distance d or d+1, all dequeued vertices have distance ≤ d, and all unvisited vertices have distance ≥ d+1.",
+        "D) The loop invariant only guarantees that visited[v] = True if v is reachable from s."
+      ],
+      "correctAnswer": "C) At the beginning of the i-th iteration, all vertices in Q have distance d or d+1, all dequeued vertices have distance ≤ d, and all unvisited vertices have distance ≥ d+1.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q4",
+      "lecture": 2,
+      "question": "4) In the lecture, one step of the BFS Theorem proof states: \"If visited[v] = True, then there is a path from s to v.\" Which proof technique is used here?",
+      "choices": [
+        "A) Proof by contradiction",
+        "B) Proof by strong induction on the number of edges in the graph",
+        "C) Proof by induction on the number of visited vertices at the start of each iteration",
+        "D) Proof by direct construction of a spanning tree"
+      ],
+      "correctAnswer": "C) Proof by induction on the number of visited vertices at the start of each iteration",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q5",
+      "lecture": 2,
+      "question": "5) Complete the following statement from the lecture: \"For v connected to s, the path v → pred[v] → pred[pred[v]] → ... → s is a ________ from v to s.\"",
+      "choices": [
+        "A) depth-first path",
+        "B) path of arbitrary length",
+        "C) longest path",
+        "D) shortest path"
+      ],
+      "correctAnswer": "D) shortest path",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q6",
+      "lecture": 2,
+      "question": "6) How does the proof of the BFS Theorem utilize a 'loop invariant'?",
+      "choices": [
+        "A) It shows that BFS only works if the graph is complete.",
+        "B) It maintains a condition about the ordering of vertices in the queue and their distances that remains true at each iteration.",
+        "C) It ensures that all vertices are colored in exactly two colors for bipartite checking.",
+        "D) It forces BFS to skip edges that lead to cycles."
+      ],
+      "correctAnswer": "B) It maintains a condition about the ordering of vertices in the queue and their distances that remains true at each iteration.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q7",
+      "lecture": 2,
+      "question": "7) Which of the following is NOT guaranteed by BFS in an unweighted graph?",
+      "choices": [
+        "A) BFS finds a shortest path from the source to every reachable vertex.",
+        "B) BFS can determine the connected components if run from each unvisited vertex.",
+        "C) BFS necessarily visits vertices in strictly increasing order of distance.",
+        "D) BFS assigns a predecessor to each visited vertex (except the source)."
+      ],
+      "correctAnswer": "C) BFS necessarily visits vertices in strictly increasing order of distance.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q8",
+      "lecture": 2,
+      "question": "8) The lecture states: \"If there is a path from s to v, then visited[v] = True.\" Which of the following justifications is used?",
+      "choices": [
+        "A) BFS visits only those vertices that are already marked visited at the start.",
+        "B) BFS continues to explore neighbors of all dequeued vertices, eventually visiting all reachable vertices.",
+        "C) BFS never revisits a vertex after the first discovery.",
+        "D) BFS relies on a topological sort to discover all reachable vertices."
+      ],
+      "correctAnswer": "B) BFS continues to explore neighbors of all dequeued vertices, eventually visiting all reachable vertices.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q9",
+      "lecture": 2,
+      "question": "9) Suppose we have the following undirected graph given as an adjacency list:\n{\n  1: [2, 3],\n  2: [1, 4],\n  3: [1, 4],\n  4: [2, 3]\n}\nIf we run BFS starting at vertex 1, which of the following is the correct order in which vertices are dequeued?",
+      "choices": [
+        "A) 1, 3, 2, 4",
+        "B) 1, 2, 3, 4",
+        "C) 1, 4, 2, 3",
+        "D) 1, 2, 4, 3"
+      ],
+      "correctAnswer": "B) 1, 2, 3, 4",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q10",
+      "lecture": 2,
+      "question": "10) In the same graph as Question 9, if pred[x] denotes the predecessor of x in the BFS tree from source 1, which set of pred values is correct?",
+      "choices": [
+        "A) pred[1] = null, pred[2] = 1, pred[3] = 1, pred[4] = 2 (or 3)",
+        "B) pred[1] = null, pred[2] = 3, pred[3] = 2, pred[4] = 1",
+        "C) pred[1] = 1, pred[2] = 1, pred[3] = 1, pred[4] = 4",
+        "D) pred[1] = null, pred[2] = null, pred[3] = null, pred[4] = null"
+      ],
+      "correctAnswer": "A) pred[1] = null, pred[2] = 1, pred[3] = 1, pred[4] = 2 (or 3)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q11",
+      "lecture": 2,
+      "question": "11) In the proof of the BFS Theorem, what is the base case for the induction on visited vertices?",
+      "choices": [
+        "A) No vertices have been visited, and s is disconnected.",
+        "B) Only the source s is visited, and s is trivially connected to itself.",
+        "C) All vertices except s have been visited.",
+        "D) The base case is not needed for BFS."
+      ],
+      "correctAnswer": "B) Only the source s is visited, and s is trivially connected to itself.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q12",
+      "lecture": 2,
+      "question": "12) Which of the following statements about the BFS queue is consistent with the lecture's loop invariant?",
+      "choices": [
+        "A) The queue can contain vertices at multiple distances greater than d+2 at the same time.",
+        "B) The queue is always empty if there are still unvisited vertices in the graph.",
+        "C) All vertices in the queue have distances differing by at most 1.",
+        "D) The queue is not used once the first vertex is dequeued."
+      ],
+      "correctAnswer": "C) All vertices in the queue have distances differing by at most 1.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q13",
+      "lecture": 2,
+      "question": "13) Which of the following uses raw LaTeX to express a key property from the BFS loop invariant?",
+      "choices": [
+        "A) \"All vertices in the queue satisfy \\( d(v) = 0 \\).\"",
+        "B) \"All vertices in the queue satisfy \\( d(v) = d \\text{ or } d+1 \\).\"",
+        "C) \"All vertices in the queue satisfy \\( d(v) < 0 \\).\"",
+        "D) \"All vertices in the queue satisfy \\( d(v) > d+2 \\).\""
+      ],
+      "correctAnswer": "B) \"All vertices in the queue satisfy \\( d(v) = d \\text{ or } d+1 \\).\"",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q14",
+      "lecture": 2,
+      "question": "14) Which of the following best summarizes the induction step in the BFS correctness proof?",
+      "choices": [
+        "A) Assume the property holds for all vertices visited so far. When a new vertex u is dequeued, we show that all its neighbors are also connected to s.",
+        "B) Assume the property is false, and derive a contradiction.",
+        "C) Assume the property holds for all edges discovered so far, and then show BFS fails for the new edges.",
+        "D) There is no induction step; BFS correctness is taken as an axiom."
+      ],
+      "correctAnswer": "A) Assume the property holds for all vertices visited so far. When a new vertex u is dequeued, we show that all its neighbors are also connected to s.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q15",
+      "lecture": 2,
+      "question": "15) What does it mean in BFS if a vertex v has distance d(v) = k from the source s?",
+      "choices": [
+        "A) There is a path from s to v with exactly k edges, and no shorter path exists.",
+        "B) v is discovered after k steps in the queue, but there might be a path of length less than k.",
+        "C) v has a cycle of length k with the source s.",
+        "D) BFS only visited v at the end of the algorithm."
+      ],
+      "correctAnswer": "A) There is a path from s to v with exactly k edges, and no shorter path exists.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L2_Q16",
+      "lecture": 2,
+      "question": "16) How is the concept of 'shortest path tree' from the lecture defined in terms of pred[v] for BFS?",
+      "choices": [
+        "A) A subgraph containing only the edges used in the DFS.",
+        "B) A tree formed by the edges (v, pred[v]) for all v such that pred[v] ≠ null, ensuring each v has exactly one parent if reachable from s.",
+        "C) A set of edges that connects every vertex in the graph to the source, potentially with cycles.",
+        "D) Any spanning tree of the graph that starts at s."
+      ],
+      "correctAnswer": "B) A tree formed by the edges (v, pred[v]) for all v such that pred[v] ≠ null, ensuring each v has exactly one parent if reachable from s.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L3_Q1",
+      "lecture": 3,
+      "question": "Which statement best describes the purpose of the induction in the BFS correctness proof?",
+      "choices": [
+        "To prove BFS runs in polynomial time",
+        "To prove BFS visits all vertices in the order of increasing distance from the source",
+        "To prove BFS is more efficient than DFS",
+        "To prove BFS can handle negative edge weights"
+      ],
+      "correctAnswer": "To prove BFS visits all vertices in the order of increasing distance from the source",
+      "explanation": "The induction argument shows that if BFS correctly visits all vertices at distance ≤ d, then it also visits all vertices at distance d+1, thereby covering all distances from the source."
+    },
+    {
+      "id": "L3_Q2",
+      "lecture": 3,
+      "question": "In the BFS proof by induction, why is it crucial that each vertex v at distance d+1 has a neighbor u at distance d?",
+      "choices": [
+        "Because BFS only enqueues vertices that have already been marked as visited",
+        "Because this neighbor relationship ensures v will be discovered after u",
+        "Because v cannot exist in the graph without a neighbor",
+        "Because BFS only works for trees"
+      ],
+      "correctAnswer": "Because this neighbor relationship ensures v will be discovered after u",
+      "explanation": "By the induction hypothesis, u is visited, so BFS enqueues v once u is processed. This guarantees that vertices at distance d+1 get visited after all distance-d vertices."
+    },
+    {
+      "id": "L3_Q3",
+      "lecture": 3,
+      "question": "Which of the following best describes the difference between BFS(s) and BFS(G) as mentioned in the lecture?",
+      "choices": [
+        "BFS(s) uses a queue, whereas BFS(G) uses a stack",
+        "BFS(s) processes a single source, while BFS(G) repeats BFS(s) on every unvisited vertex to cover the entire graph",
+        "BFS(s) is for directed graphs only, while BFS(G) is for undirected graphs",
+        "They are identical algorithms with different names"
+      ],
+      "correctAnswer": "BFS(s) processes a single source, while BFS(G) repeats BFS(s) on every unvisited vertex to cover the entire graph",
+      "explanation": "BFS(s) starts from one source s, while BFS(G) runs BFS(s) for each unvisited vertex in the graph, thus finding all connected components."
+    },
+    {
+      "id": "L3_Q4",
+      "lecture": 3,
+      "question": "What is the time complexity of BFS on a graph with n vertices and m edges, as stated in the lecture?",
+      "choices": [
+        "O(n^2)",
+        "O(n log n)",
+        "O(m + n)",
+        "O(mn)"
+      ],
+      "correctAnswer": "O(m + n)",
+      "explanation": "BFS runs in O(m + n) time using adjacency lists, where n is the number of vertices and m is the number of edges."
+    },
+    {
+      "id": "L3_Q5",
+      "lecture": 3,
+      "question": "The lecture notes mention creating a BFS forest when running BFS on the entire graph G. What does each tree in the BFS forest represent?",
+      "choices": [
+        "A cycle in the graph",
+        "A connected component of the graph",
+        "A shortest path from the source to every other vertex",
+        "A spanning tree that includes all vertices in the graph"
+      ],
+      "correctAnswer": "A connected component of the graph",
+      "explanation": "When you run BFS from each unvisited vertex, each BFS tree corresponds to one connected component."
+    },
+    {
+      "id": "L3_Q6",
+      "lecture": 3,
+      "question": "Which data structures are typically used to keep track of discovered vertices in BFS, as illustrated in the lecture?",
+      "choices": [
+        "A stack and a color array",
+        "A queue, a visited array, and an optional predecessor (pred) array",
+        "A priority queue and a distance array",
+        "A recursion stack and a parent pointer"
+      ],
+      "correctAnswer": "A queue, a visited array, and an optional predecessor (pred) array",
+      "explanation": "BFS uses a queue to process vertices in FIFO order, and it keeps a visited array (or boolean) plus a pred array to reconstruct paths."
+    },
+    {
+      "id": "L3_Q7",
+      "lecture": 3,
+      "question": "Consider the following adjacency list for a graph G:\n\n```\n{\n  1: [2, 3],\n  2: [1, 4],\n  3: [1, 4],\n  4: [2, 3]\n}\n```\nIf we run BFS starting from vertex 1, in which order are the vertices visited?",
+      "choices": [
+        "1, 2, 3, 4",
+        "1, 3, 2, 4",
+        "1, 2, 4, 3",
+        "1, 4, 2, 3"
+      ],
+      "correctAnswer": "1, 2, 3, 4",
+      "explanation": "From 1, we discover 2 and 3. Then from 2 (visited next), we discover 4. The order is 1, 2, 3, 4."
+    },
+    {
+      "id": "L3_Q8",
+      "lecture": 3,
+      "question": "Which of the following statements about bipartite graphs is mentioned in the lecture?",
+      "choices": [
+        "A bipartite graph is the same as a tree",
+        "A graph is bipartite if and only if it is 2-colorable",
+        "Bipartite graphs require exactly three distinct colors",
+        "BFS cannot be used to determine if a graph is bipartite"
+      ],
+      "correctAnswer": "A graph is bipartite if and only if it is 2-colorable",
+      "explanation": "The lecture notes state that a graph is bipartite if it can be split into two sets L and R such that all edges go from L to R, which is equivalent to being 2-colorable."
+    },
+    {
+      "id": "L3_Q9",
+      "lecture": 3,
+      "question": "How can BFS be used to check if a graph is bipartite, according to the lecture?",
+      "choices": [
+        "By ignoring edges and only checking vertices",
+        "By coloring vertices in two colors as we explore each connected component using BFS",
+        "By running BFS on each edge and verifying cycle lengths",
+        "BFS cannot detect bipartiteness; we must use DFS"
+      ],
+      "correctAnswer": "By coloring vertices in two colors as we explore each connected component using BFS",
+      "explanation": "The algorithm attempts to color the graph with two colors. During BFS, when you visit a neighbor, you assign the opposite color. If a conflict arises, the graph is not bipartite."
+    },
+    {
+      "id": "L3_Q10",
+      "lecture": 3,
+      "question": "The lecture mentions 3-colorability (tripartite graphs). What is stated about finding a 3-coloring?",
+      "choices": [
+        "It is solvable in linear time using BFS",
+        "It is trivial if the graph is connected",
+        "We do not think there is an efficient polynomial time algorithm for this problem (related to P vs NP)",
+        "It is always impossible to color a graph with 3 colors"
+      ],
+      "correctAnswer": "We do not think there is an efficient polynomial time algorithm for this problem (related to P vs NP)",
+      "explanation": "3-coloring is known to be NP-complete, and the lecture notes mention that no known polynomial time algorithm exists."
+    },
+    {
+      "id": "L3_Q11",
+      "lecture": 3,
+      "question": "Which statement about BFS and shortest paths in unweighted graphs is emphasized in the lecture?",
+      "choices": [
+        "BFS always finds a path but not necessarily the shortest one",
+        "BFS finds the shortest path (in terms of number of edges) from the source to any reachable vertex",
+        "BFS cannot find shortest paths if the graph is disconnected",
+        "BFS only works for weighted graphs"
+      ],
+      "correctAnswer": "BFS finds the shortest path (in terms of number of edges) from the source to any reachable vertex",
+      "explanation": "BFS explores vertices in layers by distance from the source, guaranteeing the shortest path in edge count."
+    },
+    {
+      "id": "L3_Q12",
+      "lecture": 3,
+      "question": "Fill in the blank from the lecture: “Output is BFS _____ . Each tree is a connected component.”",
+      "choices": [
+        "cycle",
+        "layer",
+        "forest",
+        "queue"
+      ],
+      "correctAnswer": "forest",
+      "explanation": "When running BFS from all unvisited vertices in a graph, the result is a BFS forest, one tree per connected component."
+    },
+    {
+      "id": "L3_Q13",
+      "lecture": 3,
+      "question": "Why does running BFS from every unvisited vertex allow us to find all connected components in an undirected graph?",
+      "choices": [
+        "Because each BFS can skip vertices in other components",
+        "Because BFS on one component cannot reach vertices in a different component, so we need multiple BFS runs",
+        "Because BFS only runs once in the entire graph",
+        "Because BFS marks every edge as directed"
+      ],
+      "correctAnswer": "Because BFS on one component cannot reach vertices in a different component, so we need multiple BFS runs",
+      "explanation": "A single BFS from one vertex only explores its connected component. Repeating BFS for each unvisited vertex ensures that all components are covered."
+    },
+    {
+      "id": "L3_Q14",
+      "lecture": 3,
+      "question": "Which of the following is NOT a step in the BFS(s) procedure, as shown in the lecture?",
+      "choices": [
+        "Initialize visited[s] = False for all s",
+        "Initialize pred[s] = NULL for all s",
+        "Use a queue to process vertices in FIFO order",
+        "Re-initialize visited and pred every time you dequeue a vertex"
+      ],
+      "correctAnswer": "Re-initialize visited and pred every time you dequeue a vertex",
+      "explanation": "You do not re-initialize visited or pred each time you dequeue. You only initialize them once per BFS run from a new source."
+    },
+    {
+      "id": "L3_Q15",
+      "lecture": 3,
+      "question": "Which property of BFS ensures that all vertices at distance d are fully processed before any vertex at distance d+1?",
+      "choices": [
+        "The use of a stack (LIFO)",
+        "The use of a queue (FIFO)",
+        "The use of recursion",
+        "BFS does not guarantee this property"
+      ],
+      "correctAnswer": "The use of a queue (FIFO)",
+      "explanation": "BFS relies on a queue. Once a layer of vertices at distance d is enqueued, they are dequeued and processed before the next layer (distance d+1) can be enqueued."
+    },
+    {
+      "id": "L4_Q1",
+      "lecture": 4,
+      "question": "What is the value of time at the end?",
+      "choices": [
+        "(R) # visited vertices",
+        "(S) n = total # of vertices",
+        "(T) 2 x (# visited vertices)"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q2",
+      "lecture": 4,
+      "question": "How many children does V_i have in this DFS tree?",
+      "choices": [
+        "(L) 1",
+        "(R) 2",
+        "(Y) More"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q3",
+      "lecture": 4,
+      "question": "How many children does s have in BFS(s)?",
+      "choices": [
+        "(L) 1",
+        "(R) 2",
+        "(Y) More"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q4",
+      "lecture": 4,
+      "question": "How many children does s have in DFS(s)?",
+      "choices": [
+        "(L) 1",
+        "(R) 2",
+        "(Y) More"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q5",
+      "lecture": 4,
+      "question": "Suppose DFS(u) is a recursive call made by DFS(s). Is disc[s] < disc[u]? Is finish[s] < finish[u]?",
+      "choices": [
+        "(L) Y",
+        "(R) N",
+        "(Y) Maybe, maybe not"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q6",
+      "lecture": 4,
+      "question": "Suppose disc[s] < disc[u]. Then finish[s] < finish[u]?",
+      "choices": [
+        "(R) Y",
+        "(A) N",
+        "(Y) Maybe, maybe not"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q7",
+      "lecture": 4,
+      "question": "If G has a directed cycle, it does not have any topological ordering?",
+      "choices": [
+        "(L) Y",
+        "(B) N"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q8",
+      "lecture": 4,
+      "question": "The topological ordering of a DAG is unique?",
+      "choices": [
+        "(R) True",
+        "(L) False"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q9",
+      "lecture": 4,
+      "question": "There exists a graph where the topological ordering is unique?",
+      "choices": [
+        "(L) T",
+        "(A) F"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q10",
+      "lecture": 4,
+      "question": "Consider the graph with the following adjacency list: { s: [v1, v2, v3], v1: [v4], v2: [v5], v3: [], v4: [], v5: [] }. If we run BFS starting from s, which of the following is the correct order in which vertices are first discovered?",
+      "choices": [
+        "(A) s, v1, v2, v3, v4, v5",
+        "(B) s, v1, v2, v3, v5, v4",
+        "(C) s, v2, v3, v1, v4, v5",
+        "(D) s, v3, v1, v2, v4, v5"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q11",
+      "lecture": 4,
+      "question": "Consider the graph with adjacency list: { s: [v1, v2], v1: [v3], v2: [v4], v3: [], v4: [v5], v5: [] }. If we run DFS(s) in the order of adjacency as listed, which vertex is discovered last?",
+      "choices": [
+        "(A) v5",
+        "(B) v3",
+        "(C) v4",
+        "(D) v2"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q12",
+      "lecture": 4,
+      "question": "Which of the following is the time complexity of BFS or DFS on a graph with n vertices and m edges (using adjacency lists)?",
+      "choices": [
+        "(A) O(n + m)",
+        "(B) O(n^2)",
+        "(C) O(n log n)",
+        "(D) O(m^2)"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q13",
+      "lecture": 4,
+      "question": "In a DFS tree, the predecessor array (pred) is used to store what information?",
+      "choices": [
+        "(A) The number of children of each vertex",
+        "(B) The parent of each vertex in the DFS forest",
+        "(C) The finish time of each vertex",
+        "(D) The order in which vertices were discovered"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q14",
+      "lecture": 4,
+      "question": "In DFS, disc[u] denotes the discovery time of vertex u. What does finish[u] denote?",
+      "choices": [
+        "(A) The time when DFS is complete for vertex u",
+        "(B) The number of times u has been visited",
+        "(C) The time BFS finishes visiting u",
+        "(D) The total number of edges visited before u"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q15",
+      "lecture": 4,
+      "question": "According to the Parentheses theorem of DFS, for any two vertices u and v, the intervals [disc[u], finish[u]] and [disc[v], finish[v]] have which property?",
+      "choices": [
+        "(A) They always overlap partially",
+        "(B) They never overlap",
+        "(C) They either do not overlap or one is contained within the other",
+        "(D) They always overlap fully"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L4_Q16",
+      "lecture": 4,
+      "question": "Which of the following algorithms can be used to find a topological sort of a DAG?",
+      "choices": [
+        "(A) BFS",
+        "(B) DFS",
+        "(C) Dijkstra's Algorithm",
+        "(D) Prim's Algorithm"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q1",
+      "lecture": 5,
+      "question": "Q. If G has a directed cycle, it does not have any topological ordering?",
+      "choices": [
+        "(A) Y",
+        "(B) N"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q2",
+      "lecture": 5,
+      "question": "Q. Can the DFS forest of a DAG have a back edge?",
+      "choices": [
+        "(R) Yes",
+        "(LBT) No",
+        "(U) Maybe, maybe not"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q3",
+      "lecture": 5,
+      "question": "Q. Is disc[u] < disc[v]?",
+      "choices": [
+        "(R) Y",
+        "(B) N",
+        "(U) Maybe"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q4",
+      "lecture": 5,
+      "question": "Q. Is fin[u] < fin[v]?",
+      "choices": [
+        "(LBT) Y",
+        "(B) N",
+        "(U) Maybe"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q5",
+      "lecture": 5,
+      "question": "Problem: Given a DAG as adjacency list, find a topological ordering. DFS O(m+n) time.",
+      "choices": [
+        "(A) Perform a DFS, push each vertex onto a stack as soon as it finishes, then pop the stack to get the ordering.",
+        "(B) Sort all vertices by their discovery time.",
+        "(C) Randomly list vertices; it is always a valid topological ordering for a DAG.",
+        "(D) Use BFS on the graph ignoring in-degrees."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q6",
+      "lecture": 5,
+      "question": "Which statement best describes the 'Unvisited Path Theorem' for DFS?",
+      "choices": [
+        "(A) If there is a path of unvisited neighbors from u to v when u is discovered, then v is a descendant of u in the DFS forest.",
+        "(B) Once u is visited, no other vertex can be discovered from u.",
+        "(C) If v is visited before u, then u cannot have a path to v.",
+        "(D) If u has any visited neighbors, it immediately becomes a leaf in the DFS tree."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q7",
+      "lecture": 5,
+      "question": "Which of the following is a correct interpretation of the 'Parenthesis Theorem' in DFS?",
+      "choices": [
+        "(A) For vertices u and v, the intervals [disc[u], fin[u]] and [disc[v], fin[v]] never overlap.",
+        "(B) If [disc[u], fin[u]] properly contains [disc[v], fin[v]], then v is a descendant of u in the DFS tree.",
+        "(C) If disc[u] < disc[v] then fin[u] < fin[v].",
+        "(D) The theorem only applies to undirected graphs."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q8",
+      "lecture": 5,
+      "question": "What is the time complexity of performing a DFS-based topological sort on a DAG?",
+      "choices": [
+        "(A) O(n^2)",
+        "(B) O(n log n)",
+        "(C) O(m + n)",
+        "(D) O(m^2)"
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q9",
+      "lecture": 5,
+      "question": "Which of the following outlines a BFS-based approach to topological sorting of a DAG?",
+      "choices": [
+        "(A) Compute in-degrees of all vertices, enqueue all vertices with in-degree 0, repeatedly dequeue a vertex and decrease in-degrees of its neighbors.",
+        "(B) Start a DFS from any vertex until all vertices are visited, then list them in reverse order of discovery.",
+        "(C) Randomly pick a vertex to start BFS and list vertices in the order they are dequeued.",
+        "(D) It is not possible to use BFS for topological sorting."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q10",
+      "lecture": 5,
+      "question": "What is one key difference between a BFS-based topological sort and a DFS-based topological sort?",
+      "choices": [
+        "(A) BFS-based sort requires a cycle in the graph, while DFS-based sort does not.",
+        "(B) BFS-based sort processes vertices in order of increasing in-degree, while DFS-based sort relies on finishing times.",
+        "(C) DFS-based sort only works for undirected graphs.",
+        "(D) They both have exactly the same procedure."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q11",
+      "lecture": 5,
+      "question": "Which of the following is true about edges in a DFS forest of a DAG?",
+      "choices": [
+        "(A) There can be back edges, forward edges, cross edges, and tree edges, but at least one back edge must exist.",
+        "(B) There cannot be any back edge if the graph is truly a DAG.",
+        "(C) There cannot be any tree edge if the graph is a DAG.",
+        "(D) There must be at least one cross edge for every vertex."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q12",
+      "lecture": 5,
+      "question": "Which statement summarizes: \"A directed graph G is a DAG if and only if no DFS forest of G contains a back edge\"?",
+      "choices": [
+        "(A) If G is a DAG, then any DFS forest of G must contain a back edge.",
+        "(B) If a DFS forest of G does not contain a back edge, then G is not a DAG.",
+        "(C) The absence of back edges in any DFS forest of G characterizes G as a DAG.",
+        "(D) The presence of at least one forward edge implies G is a DAG."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L5_Q13",
+      "lecture": 5,
+      "question": "What does the 'reverse order of finishing times' represent in the context of topological sorting?",
+      "choices": [
+        "(A) Increasing order of discovery times.",
+        "(B) Decreasing order of discovery times.",
+        "(C) Increasing order of finishing times.",
+        "(D) Decreasing order of finishing times."
+      ],
+      "correctAnswer": null,
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L6_Q1",
+      "lecture": 6,
+      "question": "Is there a polynomial time algorithm? n, n log n, n^3, n^5, ???",
+      "choices": [
+        "n",
+        "n log n",
+        "n^3",
+        "n^5",
+        "??? (No definitive answer provided in the lecture)"
+      ],
+      "correctAnswer": "??? (No definitive answer provided in the lecture)",
+      "explanation": "This question appears verbatim in the lecture. The slides do not provide a definitive answer."
+    },
+    {
+      "id": "L6_Q2",
+      "lecture": 6,
+      "question": "Should I add nth item or not?",
+      "choices": [
+        "Always add the nth item",
+        "Never add the nth item",
+        "Compare the result of adding vs. not adding, then pick the better value",
+        "No definitive answer provided in the lecture"
+      ],
+      "correctAnswer": "Compare the result of adding vs. not adding, then pick the better value",
+      "explanation": "This question appears in the lecture regarding the 0-1 Knapsack recursion. You either add the nth item (if it fits) or skip it, and choose whichever yields a better total value."
+    },
+    {
+      "id": "L6_Q3",
+      "lecture": 6,
+      "question": "Q. What is running time? (1) polynomial time n^3, n^2, ??? (2) more than exponential 2^n, 2^(n^2), ???",
+      "choices": [
+        "Polynomial time (e.g., n^2 or n^3)",
+        "Exponential time (e.g., 2^n)",
+        "Super-exponential (e.g., 2^(n^2))",
+        "??? (No definitive answer provided in the lecture)"
+      ],
+      "correctAnswer": "??? (No definitive answer provided in the lecture)",
+      "explanation": "This question appears verbatim in the lecture slides, which pose the possibility of polynomial or super-exponential time but do not finalize an answer."
+    },
+    {
+      "id": "L6_Q4",
+      "lecture": 6,
+      "question": "Given two strings, find the length of the longest common subsequence. LCS length = 3",
+      "choices": [
+        "The LCS length is 2",
+        "The LCS length is 3",
+        "The LCS length is 4",
+        "No definitive answer provided in the lecture"
+      ],
+      "correctAnswer": "The LCS length is 3",
+      "explanation": "This question appears in the lecture slides with the statement that the LCS length is 3 for the given example strings."
+    },
+    {
+      "id": "L6_Q5",
+      "lecture": 6,
+      "question": "Which of the following best describes the time complexity of a naive (brute force) solution to the 0-1 Knapsack problem?",
+      "choices": [
+        "O(nW)",
+        "O(2^n)",
+        "O(n^2)",
+        "O(n^3)"
+      ],
+      "correctAnswer": "O(2^n)",
+      "explanation": "A naive approach tries all subsets of items, leading to 2^n possible subsets."
+    },
+    {
+      "id": "L6_Q6",
+      "lecture": 6,
+      "question": "Which of the following recurrences correctly represents the 0-1 Knapsack problem (in raw LaTeX)?",
+      "choices": [
+        "$\\text{Knapsack}(I_n, W) = \\text{Knapsack}(I_{n-1}, W)$ for all $n, W$",
+        "$\\text{Knapsack}(I_n, W) = \\text{Knapsack}(I_{n}, W - w_n) + v_n$ always",
+        "$\\text{Knapsack}(I_n, W) = \\max\\{\\text{Knapsack}(I_{n-1}, W - w_n),\\, \\text{Knapsack}(I_{n-1}, W)\\}$ with no condition on $w_n$",
+        "$\\text{Knapsack}(I_n, W) = \\begin{cases}\n\\max\\{\\text{Knapsack}(I_{n-1}, W - w_n) + v_n,\\, \\text{Knapsack}(I_{n-1}, W)\\} & \\text{if } w_n \\le W,\\\\\n\\text{Knapsack}(I_{n-1}, W) & \\text{if } w_n > W.\\end{cases}$"
+      ],
+      "correctAnswer": "$\\text{Knapsack}(I_n, W) = \\begin{cases}\\max\\{\\text{Knapsack}(I_{n-1}, W - w_n) + v_n,\\, \\text{Knapsack}(I_{n-1}, W)\\} & \\text{if } w_n \\le W,\\\\\\text{Knapsack}(I_{n-1}, W) & \\text{if } w_n > W.\\end{cases}$",
+      "explanation": "This is the standard 0-1 Knapsack recurrence relation."
+    },
+    {
+      "id": "L6_Q7",
+      "lecture": 6,
+      "question": "Which of the following is the correct time complexity for the dynamic programming solution to the 0-1 Knapsack problem, assuming W is not too large?",
+      "choices": [
+        "O(n^2)",
+        "O(n^3)",
+        "O(nW)",
+        "O(2^n)"
+      ],
+      "correctAnswer": "O(nW)",
+      "explanation": "The DP solution for 0-1 Knapsack takes O(nW) time when W is considered part of the input size."
+    },
+    {
+      "id": "L6_Q8",
+      "lecture": 6,
+      "question": "Which of the following best describes the concept of 'overlapping subproblems' in dynamic programming?",
+      "choices": [
+        "The same subproblem is solved multiple times in naive recursion, so we can store solutions to avoid recomputation.",
+        "We never solve the same subproblem more than once.",
+        "We always solve subproblems in parallel.",
+        "Overlapping subproblems means the subproblems cannot be combined."
+      ],
+      "correctAnswer": "The same subproblem is solved multiple times in naive recursion, so we can store solutions to avoid recomputation.",
+      "explanation": "Overlapping subproblems means that the recursion revisits the same subproblems, making memoization or tabulation effective."
+    },
+    {
+      "id": "L6_Q9",
+      "lecture": 6,
+      "question": "Which statement best defines 'Dynamic Programming' as used in these lectures?",
+      "choices": [
+        "A method that only works for polynomial-time algorithms.",
+        "A method that transforms every exponential algorithm into a polynomial one.",
+        "A method that uses recursion plus memoization or tabulation to solve overlapping subproblems efficiently.",
+        "A method that enumerates all subsets."
+      ],
+      "correctAnswer": "A method that uses recursion plus memoization or tabulation to solve overlapping subproblems efficiently.",
+      "explanation": "Dynamic programming is characterized by optimal substructure, overlapping subproblems, and storing sub-results to avoid repeated computation."
+    },
+    {
+      "id": "L6_Q10",
+      "lecture": 6,
+      "question": "What is the main difference between the brute force solution for the 0-1 Knapsack problem and the dynamic programming solution, in terms of complexity?",
+      "choices": [
+        "Brute force is O(nW), DP is O(2^n).",
+        "Brute force is O(2^n), DP is O(nW).",
+        "Both are O(nW).",
+        "Both are O(2^n)."
+      ],
+      "correctAnswer": "Brute force is O(2^n), DP is O(nW).",
+      "explanation": "Brute force checks all subsets (2^n). The DP approach reduces this to O(nW) by using overlapping subproblems."
+    },
+    {
+      "id": "L6_Q11",
+      "lecture": 6,
+      "question": "Which of the following is the correct recurrence relation for the Longest Common Subsequence (LCS) problem, in raw LaTeX form?",
+      "choices": [
+        "$\\text{LCS}(X, Y) = 1 + \\text{LCS}(X[0..m-2], Y[0..n-2])$ if $X[m-1] = Y[n-1]$, else 0",
+        "$\\text{LCS}(X, Y) = 1 + \\text{LCS}(X, Y)$ always",
+        "$\\text{LCS}(X, Y) = \\text{LCS}(X[0..m-2], Y[0..n-1]) + \\text{LCS}(X[0..m-1], Y[0..n-2])$",
+        "$\\text{LCS}(X, Y) = \\begin{cases} 1 + \\text{LCS}(X[0..m-2], Y[0..n-2]) & \\text{if } X[m-1] = Y[n-1],\\\\ \\max\\{\\text{LCS}(X[0..m-2], Y[0..n-1]), \\text{LCS}(X[0..m-1], Y[0..n-2])\\} & \\text{otherwise} \\end{cases}$"
+      ],
+      "correctAnswer": "$\\text{LCS}(X, Y) = \\begin{cases} 1 + \\text{LCS}(X[0..m-2], Y[0..n-2]) & \\text{if } X[m-1] = Y[n-1],\\\\ \\max\\{\\text{LCS}(X[0..m-2], Y[0..n-1]), \\text{LCS}(X[0..m-1], Y[0..n-2])\\} & \\text{otherwise} \\end{cases}$",
+      "explanation": "This is the standard recurrence for LCS: if the last characters match, add 1 and recurse on both strings minus the last character. Otherwise, take the maximum of dropping one character from either string."
+    },
+    {
+      "id": "L6_Q12",
+      "lecture": 6,
+      "question": "Which of the following best describes the time complexity of the typical dynamic programming solution for the LCS problem with input strings of lengths m and n?",
+      "choices": [
+        "O(mn)",
+        "O(m + n)",
+        "O(2^(m+n))",
+        "O(m^2 + n^2)"
+      ],
+      "correctAnswer": "O(mn)",
+      "explanation": "The LCS DP approach fills an m-by-n table, giving a time complexity of O(mn)."
+    },
+    {
+      "id": "L6_Q13",
+      "lecture": 6,
+      "question": "In the context of the LCS problem, which statement is true about 'subsequences'?",
+      "choices": [
+        "A subsequence must consist of consecutive characters.",
+        "A subsequence can skip characters but must preserve the relative order.",
+        "A subsequence can reorder characters arbitrarily.",
+        "A subsequence is always identical to a substring."
+      ],
+      "correctAnswer": "A subsequence can skip characters but must preserve the relative order.",
+      "explanation": "A subsequence allows characters to be non-contiguous, but they must appear in the same order as in the original sequence."
+    },
+    {
+      "id": "L6_Q14",
+      "lecture": 6,
+      "question": "Which of the following is NOT typically a characteristic of dynamic programming?",
+      "choices": [
+        "Optimal substructure",
+        "Overlapping subproblems",
+        "Memoization or tabulation",
+        "Randomized pivot selection"
+      ],
+      "correctAnswer": "Randomized pivot selection",
+      "explanation": "Dynamic programming is deterministic and relies on storing solutions to subproblems. Randomized pivot selection is not part of DP."
+    },
+    {
+      "id": "L6_Q15",
+      "lecture": 6,
+      "question": "Which of the following is a valid reason why n=20 might be feasible for an exponential-time algorithm, while n=100 might be infeasible?",
+      "choices": [
+        "2^20 is approximately 1 million, while 2^100 is astronomically large",
+        "20 is bigger than 100",
+        "2^100 is about 1 million",
+        "There is no difference in complexity"
+      ],
+      "correctAnswer": "2^20 is approximately 1 million, while 2^100 is astronomically large",
+      "explanation": "Exponential growth is extremely rapid. 2^20 is still within reach of modern computers, while 2^100 is far too large."
+    },
+    {
+      "id": "L6_Q16",
+      "lecture": 6,
+      "question": "How does the bottom-up approach fill the DP table for the 0-1 Knapsack problem, as shown in the lecture slides?",
+      "choices": [
+        "Row by row from left to right",
+        "Column by column from top to bottom",
+        "Diagonally from top-left to bottom-right",
+        "In random order"
+      ],
+      "correctAnswer": "Column by column from top to bottom",
+      "explanation": "The lecture slides illustrate filling each column for increasing weight capacities W' and item indices."
+    },
+    {
+      "id": "L7_Q1",
+      "lecture": 7,
+      "question": "Q: can this happen? If both A[m-1] and B[n-1] are not matched.",
+      "choices": [
+        "Yes, it is possible",
+        "No, it is impossible"
+      ],
+      "correctAnswer": "No, it is impossible. Contradiction. Therefore, B[n-1] is matched.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q2",
+      "lecture": 7,
+      "question": "Q: can I change the LCS to make B[n-1] match with A[m-1]? I don't understand the question.",
+      "choices": [
+        "Yes",
+        "No",
+        "I don't understand the question"
+      ],
+      "correctAnswer": "I don't understand the question.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q3",
+      "lecture": 7,
+      "question": "Q: Neither A[m-1] nor B[n-1] participate in an LCS? True/False? We cannot just call LCS(A[0..m-2], B[0..n-2])?",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False. We cannot just call LCS(A[0..m-2], B[0..n-2]). Contradiction.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q4",
+      "lecture": 7,
+      "question": "Q: can both A[m-1] and B[n-1] be in an LCS? Maybe, maybe not.",
+      "choices": [
+        "Yes",
+        "No",
+        "Maybe, maybe not"
+      ],
+      "correctAnswer": "Maybe, maybe not.",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q5",
+      "lecture": 7,
+      "question": "Q: What is the dimension of this table? (R) 1, (L) 2, (Y) More.",
+      "choices": [
+        "1",
+        "2",
+        "More"
+      ],
+      "correctAnswer": "2",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q6",
+      "lecture": 7,
+      "question": "Q: In a BST, each s in Σ has a 'depth' d(s). The depth of a character/node is the number of nodes on a root->node path. Q: What is the total lookup/search time? (R) \\(\\sum_{s \\in \\Sigma} f(s) * r(s)\\), (L) \\(\\sum_{s \\in \\Sigma} f(s) * d(s)\\), (Y) \\(\\sum_{s \\in \\Sigma} f(s) * \\log(d(s))\\)?",
+      "choices": [
+        "\\(\\sum_{s \\in \\Sigma} f(s) * r(s)\\)",
+        "\\(\\sum_{s \\in \\Sigma} f(s) * d(s)\\)",
+        "\\(\\sum_{s \\in \\Sigma} f(s) * \\log(d(s))\\)"
+      ],
+      "correctAnswer": "\\(\\sum_{s \\in \\Sigma} f(s) * d(s)\\)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q7",
+      "lecture": 7,
+      "question": "Which of the following best describes the Longest Common Subsequence (LCS) problem?",
+      "choices": [
+        "Finding a substring common to two sequences that is as short as possible",
+        "Finding the longest subsequence common to two sequences",
+        "Finding the longest prefix common to two sequences",
+        "Finding any non-empty subsequence common to two sequences"
+      ],
+      "correctAnswer": "Finding the longest subsequence common to two sequences",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q8",
+      "lecture": 7,
+      "question": "Which of the following recurrences correctly defines \\(\\mathrm{LCS}(i,j)\\)?",
+      "choices": [
+        "\\(\\mathrm{LCS}(i,j) = \\mathrm{LCS}(i-1,j-1) + 2\\)",
+        "\\(\\mathrm{LCS}(i,j) = 1 + \\mathrm{LCS}(i-1,j-1)\\) if \\(A[i] = B[j]\\), otherwise 0",
+        "\\(\\mathrm{LCS}(i,j) = \\begin{cases} 1 + \\mathrm{LCS}(i-1, j-1) & \\text{if } A[i] = B[j]\\\\ \\max(\\mathrm{LCS}(i-1, j), \\mathrm{LCS}(i, j-1)) & \\text{otherwise} \\end{cases}\\)",
+        "\\(\\mathrm{LCS}(i,j) = \\mathrm{LCS}(i-1,j-1) - 1\\)"
+      ],
+      "correctAnswer": "\\(\\mathrm{LCS}(i,j) = \\begin{cases} 1 + \\mathrm{LCS}(i-1, j-1) & \\text{if } A[i] = B[j]\\\\ \\max(\\mathrm{LCS}(i-1, j), \\mathrm{LCS}(i, j-1)) & \\text{otherwise} \\end{cases}\\)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q9",
+      "lecture": 7,
+      "question": "Which of the following is a valid base case for the LCS dynamic programming approach?",
+      "choices": [
+        "\\(\\mathrm{LCS}(0, j) = 0\\) for all j, and \\(\\mathrm{LCS}(i, 0) = 0\\) for all i",
+        "\\(\\mathrm{LCS}(0, j) = j\\) for all j, and \\(\\mathrm{LCS}(i, 0) = i\\) for all i",
+        "\\(\\mathrm{LCS}(0, j) = i + j\\)",
+        "\\(\\mathrm{LCS}(0, j) = 1\\) for all j, and \\(\\mathrm{LCS}(i, 0) = 1\\) for all i"
+      ],
+      "correctAnswer": "\\(\\mathrm{LCS}(0, j) = 0\\) for all j, and \\(\\mathrm{LCS}(i, 0) = 0\\) for all i",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q10",
+      "lecture": 7,
+      "question": "What is the time complexity of the standard LCS dynamic programming solution on sequences of length m and n?",
+      "choices": [
+        "O(m + n)",
+        "O(m * n)",
+        "O(m^2 * n)",
+        "O(m * n^2)"
+      ],
+      "correctAnswer": "O(m * n)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q11",
+      "lecture": 7,
+      "question": "How many subproblems does the LCS dynamic programming approach typically have for sequences of length m and n?",
+      "choices": [
+        "m + n",
+        "2^(m+n)",
+        "m * n",
+        "m^n"
+      ],
+      "correctAnswer": "m * n",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q12",
+      "lecture": 7,
+      "question": "In the example strings \"STRING\" and \"SPIN\", which of the following is an LCS?",
+      "choices": [
+        "\"SING\"",
+        "\"SIN\"",
+        "\"STR\"",
+        "\"PIN\""
+      ],
+      "correctAnswer": "\"SIN\"",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q13",
+      "lecture": 7,
+      "question": "What is the primary reason to use dynamic programming for LCS instead of naive recursion?",
+      "choices": [
+        "It has fewer base cases",
+        "It solves overlapping subproblems efficiently and avoids repeated computations",
+        "It always requires less memory",
+        "It cannot be implemented with recursion at all"
+      ],
+      "correctAnswer": "It solves overlapping subproblems efficiently and avoids repeated computations",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q14",
+      "lecture": 7,
+      "question": "Which technique is typically used to construct an Optimal Binary Search Tree (OBST) that minimizes \\(\\sum_{s \\in \\Sigma} f(s) \\cdot d(s)\\)?",
+      "choices": [
+        "Greedy approach",
+        "Divide and conquer only",
+        "Dynamic programming",
+        "Randomized algorithm"
+      ],
+      "correctAnswer": "Dynamic programming",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L7_Q15",
+      "lecture": 7,
+      "question": "What is the objective in constructing an optimal BST for a set of keys \\(\\Sigma\\) with frequencies \\(f(s)\\)?",
+      "choices": [
+        "Minimize the height of the BST",
+        "Minimize \\(\\sum_{s \\in \\Sigma} f(s)\\)",
+        "Minimize \\(\\sum_{s \\in \\Sigma} f(s) \\cdot d(s)\\)",
+        "Maximize the number of leaves"
+      ],
+      "correctAnswer": "Minimize \\(\\sum_{s \\in \\Sigma} f(s) \\cdot d(s)\\)",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q1",
+      "lecture": 8,
+      "question": "1) Suppose we are doing compression of a text. There is a mapping from \\(\\Gamma\\) to bit strings (compressed representation). We build a BST on \\(\\Gamma\\) and store the compressed representation in the nodes of the tree. Which of the following best describes why we use a BST for this mapping?",
+      "choices": [
+        "A) Because any BST guarantees the shortest possible bit strings for all characters.",
+        "B) Because the BST structure can be used to derive prefix-free codes and efficient lookups based on frequency.",
+        "C) Because BST insertion is always O(1).",
+        "D) Because the BST ensures that all characters have the same depth."
+      ],
+      "correctAnswer": "B",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q2",
+      "lecture": 8,
+      "question": "2) When building a BST, what is the final choice? (Can we solve the optimal BST problem using recursion?)",
+      "choices": [
+        "A) The final choice is which node to delete last in the BST. Yes, we solve by removing the most frequent nodes first.",
+        "B) The final choice is which node to rotate to the root. We solve by performing rotations recursively.",
+        "C) The final choice is which character in \\(\\Gamma\\) to pick as the root. Yes, we can solve this by recursively building left and right subtrees for all possible root choices.",
+        "D) The final choice is how to traverse the BST. We solve by enumerating all paths in a recursive manner."
+      ],
+      "correctAnswer": "C",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q3",
+      "lecture": 8,
+      "question": "3) What is the total lookup (search) time of characters in \\(\\Gamma_x\\) if they lie in the left subtree of a BST with root \\(x\\)? (From the lecture: “What is the total lookup time of characters in \\(\\Gamma_x\\) in \\(T\\)?”)",
+      "choices": [
+        "A) \\(\\sum_{y' \\in \\Gamma_x} f(y') \\cdot d(y')\\)",
+        "B) \\(\\sum_{y' \\in \\Gamma_x} f(y') + d(y')\\)",
+        "C) \\(\\sum_{y' \\in \\Gamma_x} (f(y') / d(y'))\\)",
+        "D) \\(\\sum_{y' \\in \\Gamma_x} (f(y') \\times d(x))\\)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q4",
+      "lecture": 8,
+      "question": "4) Similarly, what is the total lookup (search) time of characters in \\(\\Gamma_y\\) if they lie in the right subtree of a BST with root \\(x\\)? (From the lecture: “Similarly, the total lookup search time of characters in \\(\\Gamma_y\\) in \\(T\\) is...?”)",
+      "choices": [
+        "A) \\(\\sum_{y' \\in \\Gamma_y} f(y') \\cdot d(y')\\)",
+        "B) \\(\\sum_{y' \\in \\Gamma_y} (f(y') + d(y'))\\)",
+        "C) \\(\\sum_{y' \\in \\Gamma_y} (f(y') / d(y'))\\)",
+        "D) \\(\\sum_{y' \\in \\Gamma_y} (f(y') - d(y'))\\)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q5",
+      "lecture": 8,
+      "question": "5) What is the total search time contributed by the root character \\(x\\) itself in a BST?",
+      "choices": [
+        "A) \\(f(x) \\cdot 0\\) because the root has depth 0.",
+        "B) \\(f(x) \\cdot 1\\) if we count the root depth as 1.",
+        "C) \\(f(x) \\cdot d(x)\\) where \\(d(x)\\) is the depth of the root in 1-based counting.",
+        "D) All of the above can be correct depending on whether depth is 0-based or 1-based."
+      ],
+      "correctAnswer": "D",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q6",
+      "lecture": 8,
+      "question": "6) How many possible arguments (i.e., pairs \\((i,j)\\)) does \\(\\mathrm{OptBST}(i,j)\\) have when the universe (set of characters) has size \\(n\\)? (From the lecture: “How many possible arguments (triplets) does OptBST(i,j) have? The DP table...”)",
+      "choices": [
+        "A) \\(\\Theta(n)\\)",
+        "B) \\(\\Theta(n^2)\\)",
+        "C) \\(\\Theta(n \\log n)\\)",
+        "D) \\(\\Theta(2^n)\\)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q7",
+      "lecture": 8,
+      "question": "7) What is the base case for the dynamic programming approach to building an optimal BST from a consecutive subset \\([i..j]\\)? (From the lecture: “Base case: i=j => OptBST(i,i) = f(i).”)",
+      "choices": [
+        "A) \\(\\mathrm{OptBST}(i,i) = f(i)\\)",
+        "B) \\(\\mathrm{OptBST}(i,i) = 0\\)",
+        "C) \\(\\mathrm{OptBST}(i,i) = i^2\\)",
+        "D) \\(\\mathrm{OptBST}(i,i) = 1 + f(i)\\)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q8",
+      "lecture": 8,
+      "question": "8) Which of the following correctly represents the recurrence relation for \\(\\mathrm{OptBST}(i,j)\\)? (From the lecture slides on the DP formula.)",
+      "choices": [
+        "A) \\(\\mathrm{OptBST}(i,j) = \\min_{k \\in [i..j]} [\\mathrm{OptBST}(i,k-1) + \\mathrm{OptBST}(k+1,j)]\\)",
+        "B) \\(\\mathrm{OptBST}(i,j) = \\max_{k \\in [i..j]} [\\mathrm{OptBST}(i,k-1) + \\mathrm{OptBST}(k+1,j)]\\)",
+        "C) \\(\\mathrm{OptBST}(i,j) = \\min_{k \\in [i..j]} [\\mathrm{OptBST}(i,k-1) + \\mathrm{OptBST}(k+1,j) + \\sum_{\\ell=i}^{j} f(\\ell)]\\)",
+        "D) \\(\\mathrm{OptBST}(i,j) = \\sum_{k \\in [i..j]} [f(k) + \\mathrm{OptBST}(i,k-1) + \\mathrm{OptBST}(k+1,j)]\\)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q9",
+      "lecture": 8,
+      "question": "9) In the optimal BST DP recurrence, what is the role of \\(\\sum_{\\ell=i}^{j} f(\\ell)\\)?",
+      "choices": [
+        "A) It represents the total frequency contribution (search cost) for the entire subtree spanning \\([i..j]\\).",
+        "B) It is just a constant offset that does not affect which root is chosen.",
+        "C) It is the frequency of the leftmost node only.",
+        "D) It represents the sum of the depths of each node in \\([i..j]\\)."
+      ],
+      "correctAnswer": "A",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q10",
+      "lecture": 8,
+      "question": "10) After computing \\(\\mathrm{OptBST}(i,j)\\), how do we decide which \\(k\\) in \\([i..j]\\) becomes the actual root of that subtree? (From the lecture: “Root(i,j) = k that minimizes the above quantity.”)",
+      "choices": [
+        "A) We pick \\(k\\) randomly from \\([i..j]\\).",
+        "B) We pick \\(k\\) that maximizes the DP value, to get the tallest tree.",
+        "C) We pick \\(k\\) that minimizes the cost \\(\\mathrm{OptBST}(i,k-1) + \\mathrm{OptBST}(k+1,j) + \\sum_{\\ell=i}^{j} f(\\ell)\\).",
+        "D) We pick \\(k\\) if and only if \\(f(k)\\) is strictly larger than all other frequencies in \\([i..j]\\)."
+      ],
+      "correctAnswer": "C",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q11",
+      "lecture": 8,
+      "question": "11) Consider a BST with adjacency list representation for nodes \\(m, a, s\\) such that \\(m\\) is the root, \\(a\\) is in the left subtree, and \\(s\\) is in the right subtree. Which of the following adjacency lists is correct?",
+      "choices": [
+        "A) m: [a, s], a: [], s: []",
+        "B) m: [], a: [m], s: [m]",
+        "C) m: [s], a: [m], s: [m]",
+        "D) a: [m], m: [s], s: []"
+      ],
+      "correctAnswer": "A",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q12",
+      "lecture": 8,
+      "question": "12) If all characters in \\(\\Gamma\\) have the same frequency, which BST structure typically leads to the minimal average search time?",
+      "choices": [
+        "A) A skewed BST (all nodes to the left).",
+        "B) A skewed BST (all nodes to the right).",
+        "C) A balanced BST (roughly equal height subtrees).",
+        "D) A BST where the root has the highest frequency and others are leaves."
+      ],
+      "correctAnswer": "C",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q13",
+      "lecture": 8,
+      "question": "13) Which of the following is NOT part of the dynamic programming table approach for the optimal BST problem?",
+      "choices": [
+        "A) Filling a 2D table for \\(\\mathrm{OptBST}(i,j)\\).",
+        "B) Using the base case \\(\\mathrm{OptBST}(i,i) = f(i)\\).",
+        "C) Computing the sum of frequencies \\(\\sum_{\\ell=i}^{j} f(\\ell)\\) each time.",
+        "D) Randomly picking a root in each step without considering cost minimization."
+      ],
+      "correctAnswer": "D",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q14",
+      "lecture": 8,
+      "question": "14) What is the time complexity of the naive recursive approach (without memoization) for constructing the optimal BST?",
+      "choices": [
+        "A) \\(O(n^3)\\)",
+        "B) \\(O(2^n)\\)",
+        "C) \\(O(n^2)\\)",
+        "D) \\(O(n \\log n)\\)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L8_Q15",
+      "lecture": 8,
+      "question": "15) What is the time complexity of the dynamic programming approach for the optimal BST problem using the standard DP table filling method?",
+      "choices": [
+        "A) \\(O(n^2)\\)",
+        "B) \\(O(n^3)\\)",
+        "C) \\(O(n \\log n)\\)",
+        "D) \\(O(2^n)\\)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "No explanation provided."
+    },
+    {
+      "id": "L9_Q1",
+      "lecture": 9,
+      "question": "Q1 (from the lecture): How many operations to compute M1 x M2 x M3 x M4?",
+      "choices": [
+        "p1 * p2 * p3 + p1 * p3 * p4 + p1 * p4 * p5",
+        "p1 * p2 * p3",
+        "p2 * p3 * p4 + p3 * p4 * p5",
+        "No multiplications are needed"
+      ],
+      "correctAnswer": "p1 * p2 * p3 + p1 * p3 * p4 + p1 * p4 * p5",
+      "explanation": "Using a left-to-right parenthesization ((M1 x M2) x M3) x M4) leads to these three terms in the total cost."
+    },
+    {
+      "id": "L9_Q2",
+      "lecture": 9,
+      "question": "Q2 (from the lecture): What is the most efficient multiplication method? Best way to generalize matrix multiplication?",
+      "choices": [
+        "Always multiply from left to right",
+        "Always multiply from right to left",
+        "Use a dynamic programming approach to find the optimal parenthesization",
+        "Use a greedy strategy that picks the smallest dimension first"
+      ],
+      "correctAnswer": "Use a dynamic programming approach to find the optimal parenthesization",
+      "explanation": "Matrix Chain Multiplication is optimally solved using DP to find the best way to parenthesize the product."
+    },
+    {
+      "id": "L9_Q3",
+      "lecture": 9,
+      "question": "Q3: In matrix chain multiplication, if Mi has dimensions p_i x p_(i+1), what is the base case for the DP table entry LP(i, i)?",
+      "choices": [
+        "LP(i, i) = 0",
+        "LP(i, i) = p_i * p_(i+1)",
+        "LP(i, i) = infinity",
+        "LP(i, i) = 1"
+      ],
+      "correctAnswer": "LP(i, i) = 0",
+      "explanation": "A single matrix does not require any multiplication, so the cost is 0."
+    },
+    {
+      "id": "L9_Q4",
+      "lecture": 9,
+      "question": "Q4: Which of the following is the correct recurrence relation (in raw LaTeX) for the Matrix Chain Multiplication problem?",
+      "choices": [
+        "\\( LP(i,j) = \\min_{i \\leq k < j} \\{ LP(i,k) + LP(k+1,j) + p_i \\cdot p_{k+1} \\cdot p_{j+1} \\} \\)",
+        "\\( LP(i,j) = \\max_{i \\leq k < j} \\{ LP(i,k) + LP(k+1,j) + p_i \\cdot p_{k+1} \\cdot p_{j+1} \\} \\)",
+        "\\( LP(i,j) = LP(i,j-1) + p_i \\cdot p_j \\)",
+        "\\( LP(i,j) = p_i \\cdot p_{j+1} \\)"
+      ],
+      "correctAnswer": "\\( LP(i,j) = \\min_{i \\leq k < j} \\{ LP(i,k) + LP(k+1,j) + p_i \\cdot p_{k+1} \\cdot p_{j+1} \\} \\)",
+      "explanation": "The standard DP recurrence for Matrix Chain Multiplication takes the minimum cost over all possible splits k."
+    },
+    {
+      "id": "L9_Q5",
+      "lecture": 9,
+      "question": "Q5: What is the time complexity of filling the DP table for the Matrix Chain Multiplication problem using the standard dynamic programming approach?",
+      "choices": [
+        "O(n^2)",
+        "O(n^3)",
+        "O(n log n)",
+        "O(2^n)"
+      ],
+      "correctAnswer": "O(n^3)",
+      "explanation": "We use three nested loops to fill the n x n DP table, leading to O(n^3) time."
+    },
+    {
+      "id": "L9_Q6",
+      "lecture": 9,
+      "question": "Q6: Why do we store the index k that gives the minimum in the DP recurrence for Matrix Chain Multiplication?",
+      "choices": [
+        "To quickly compute the number of scalar multiplications",
+        "To reconstruct the optimal parenthesization later",
+        "To detect cycles in the multiplication order",
+        "It is not necessary to store k"
+      ],
+      "correctAnswer": "To reconstruct the optimal parenthesization later",
+      "explanation": "Storing the split point k allows us to trace back through the DP table and build the actual parenthesization."
+    },
+    {
+      "id": "L9_Q7",
+      "lecture": 9,
+      "question": "Q7: In Matrix Chain Multiplication, if we have matrices M1, M2, M3, M4 with dimensions p1 x p2, p2 x p3, p3 x p4, p4 x p5 respectively, which of the following parenthesizations always yields the naive left-to-right cost?",
+      "choices": [
+        "( ( M1 x M2 ) x M3 ) x M4",
+        "M1 x ( M2 x ( M3 x M4 ) )",
+        "( M1 x ( M2 x M3 ) ) x M4",
+        "( M1 x M2 ) x ( M3 x M4 )"
+      ],
+      "correctAnswer": "( ( M1 x M2 ) x M3 ) x M4",
+      "explanation": "Naive left-to-right means we first multiply M1 and M2, then multiply the result with M3, then multiply that result with M4."
+    },
+    {
+      "id": "L9_Q8",
+      "lecture": 9,
+      "question": "Q8: What is the size (dimension) of the DP table for Matrix Chain Multiplication if there are n matrices?",
+      "choices": [
+        "n x n",
+        "(n+1) x (n+1)",
+        "n x (n-1)",
+        "n x (n+1)"
+      ],
+      "correctAnswer": "n x n",
+      "explanation": "We typically use a 2D table LP[i,j] for i and j in [1..n], so it is n x n in size."
+    },
+    {
+      "id": "L9_Q9",
+      "lecture": 9,
+      "question": "Q9: Once we fill the DP table for Matrix Chain Multiplication, how do we retrieve the optimal parenthesization?",
+      "choices": [
+        "We only look at LP(1,n) and guess the splits",
+        "We use the stored k values to backtrack from LP(1,n)",
+        "We reorder the matrices by dimension",
+        "We do not need to retrieve the parenthesization, only the cost"
+      ],
+      "correctAnswer": "We use the stored k values to backtrack from LP(1,n)",
+      "explanation": "During the DP computation, we store the optimal split points k. We then recursively reconstruct the parenthesization."
+    },
+    {
+      "id": "L9_Q10",
+      "lecture": 9,
+      "question": "Q10: (from the lecture) Path Optimization Over a DAG: What is the order to fill up the DP table for the path optimization?",
+      "choices": [
+        "Fill rows from left to right",
+        "Random order",
+        "Topological ordering",
+        "By diagonals"
+      ],
+      "correctAnswer": "Topological ordering",
+      "explanation": "When optimizing over a DAG, we process vertices in topological order so that all incoming edges have been computed."
+    },
+    {
+      "id": "L9_Q11",
+      "lecture": 9,
+      "question": "Q11: What is the base case for the Longest Path DP in a DAG?",
+      "choices": [
+        "LongestPath(v) = 1 for every vertex v",
+        "LongestPath(v) = 0 if v is a source (no in-neighbors)",
+        "LongestPath(v) = infinity for every vertex v",
+        "LongestPath(v) = -infinity for every vertex v"
+      ],
+      "correctAnswer": "LongestPath(v) = 0 if v is a source (no in-neighbors)",
+      "explanation": "A source node has no predecessors, so the length of the path starting at v is 0 additional edges."
+    },
+    {
+      "id": "L9_Q12",
+      "lecture": 9,
+      "question": "Q12: Which of the following recurrences correctly defines LongestPath(v) in a weighted DAG (in raw LaTeX)?",
+      "choices": [
+        "\\( \\text{LongestPath}(v) = \\max_{u \\in N^-(v)} ( \\text{LongestPath}(u) + \\text{weight}(u,v) ) \\)",
+        "\\( \\text{LongestPath}(v) = \\min_{u \\in N^-(v)} ( \\text{LongestPath}(u) + \\text{weight}(u,v) ) \\)",
+        "\\( \\text{LongestPath}(v) = \\text{LongestPath}(v-1) + \\text{weight}(v-1,v) \\)",
+        "\\( \\text{LongestPath}(v) = 0 \\)"
+      ],
+      "correctAnswer": "\\( \\text{LongestPath}(v) = \\max_{u \\in N^-(v)} ( \\text{LongestPath}(u) + \\text{weight}(u,v) ) \\)",
+      "explanation": "We look at all predecessors u of v and take the maximum of LongestPath(u) + edge weight."
+    },
+    {
+      "id": "L9_Q13",
+      "lecture": 9,
+      "question": "Q13: What is the time complexity of finding the longest path in a DAG using the DP approach (assuming we have n vertices and m edges)?",
+      "choices": [
+        "O(n + m)",
+        "O(n^2)",
+        "O(n^3)",
+        "O(2^n)"
+      ],
+      "correctAnswer": "O(n + m)",
+      "explanation": "We perform a topological sort in O(n + m) and then process each edge once, leading to O(n + m) total."
+    },
+    {
+      "id": "L9_Q14",
+      "lecture": 9,
+      "question": "Q14: Consider the DAG given by the adjacency list (with weights in parentheses): {1: [(2, 3), (3, 5)], 2: [(4, 2)], 3: [(4, 1)], 4: []}. What is the length of the longest path from node 1 to node 4?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "8",
+      "explanation": "Paths are: 1->2->4 with weight 3+2=5, or 1->3->4 with weight 5+1=6. (Note: There appears to be a discrepancy since the computed maximum weight is 6, not 8.)"
+    },
+    {
+      "id": "L9_Q15",
+      "lecture": 9,
+      "question": "Q15: Which step must be done before filling the DP table for longest paths in a DAG?",
+      "choices": [
+        "Compute a minimal spanning tree",
+        "Perform a topological sort of the DAG",
+        "Check if the graph is strongly connected",
+        "Use BFS from all vertices"
+      ],
+      "correctAnswer": "Perform a topological sort of the DAG",
+      "explanation": "The topological order ensures that when we process a vertex, all of its predecessors have already been processed."
+    },
+    {
+      "id": "L9_Q16",
+      "lecture": 9,
+      "question": "Q16: In the DP approach for longest paths, how do we handle vertices with no incoming edges?",
+      "choices": [
+        "They must be removed from the graph",
+        "We set LongestPath(v) = 0",
+        "We set LongestPath(v) = infinity",
+        "They cannot appear in a DAG"
+      ],
+      "correctAnswer": "We set LongestPath(v) = 0",
+      "explanation": "A source vertex has no predecessors, so the longest path up to that vertex is 0 by definition."
+    },
+    {
+      "id": "L9_Q17",
+      "lecture": 9,
+      "question": "Q17: Why can we solve the longest path problem in a DAG efficiently but not necessarily in graphs with cycles?",
+      "choices": [
+        "DAGs have fewer edges",
+        "DAGs do not have negative edge weights",
+        "DAGs have a topological ordering that prevents infinite cycles",
+        "DAGs always have at most one path between any two vertices"
+      ],
+      "correctAnswer": "DAGs have a topological ordering that prevents infinite cycles",
+      "explanation": "In graphs with cycles, the longest path problem can be NP-hard, but DAGs allow a linearization of vertices that avoids this issue."
+    },
+    {
+      "id": "L9_Q18",
+      "lecture": 9,
+      "question": "Q18: In the matrix chain multiplication problem, which statement best describes why we use dynamic programming instead of a simple greedy approach?",
+      "choices": [
+        "A greedy approach might minimize the immediate cost but not the overall cost",
+        "A greedy approach is always optimal, so DP is unnecessary",
+        "Matrix multiplication has no optimal substructure",
+        "DP is slower but we use it for academic reasons"
+      ],
+      "correctAnswer": "A greedy approach might minimize the immediate cost but not the overall cost",
+      "explanation": "The matrix chain multiplication problem has optimal substructure and overlapping subproblems, which a simple greedy strategy cannot optimally solve in all cases."
+    },
+    {
+      "id": "L9_Q19",
+      "lecture": 9,
+      "question": "Q19: When filling the DP table for matrix chain multiplication, we typically do it by diagonals. Which diagonal do we start with?",
+      "choices": [
+        "Main diagonal where i = j",
+        "Top-right diagonal",
+        "Bottom-left diagonal",
+        "We fill rows from left to right"
+      ],
+      "correctAnswer": "Main diagonal where i = j",
+      "explanation": "We start with subproblems of length 1 (i.e., single matrices), where the cost is 0, then move to longer subproblems."
+    },
+    {
+      "id": "L9_Q20",
+      "lecture": 9,
+      "question": "Q20: In path optimization over a DAG, which statement is true regarding the edge relaxation order?",
+      "choices": [
+        "We must relax edges in decreasing order of weights",
+        "We must relax edges in increasing order of weights",
+        "We must relax edges according to a topological order of their source vertices",
+        "We can relax edges in any order we want"
+      ],
+      "correctAnswer": "We must relax edges according to a topological order of their source vertices",
+      "explanation": "Each vertex's longest path depends on its predecessors, so we process vertices in topological order to ensure we have computed all predecessor values first."
+    }
+  ],
+  "issues": [
+    "Lecture 1 Q8: The condition for updating the shortest path distance in BFS is given as 'If d(u) ≤ d(v) + 1 for every edge (u,v)', which seems unusual. Typically, one would update if d(v) > d(u) + 1.",
+    "Lecture 9 Q14: In the given DAG, the computed path weights are 5 (for path 1→2→4) and 6 (for path 1→3→4), yet the answer is listed as 8. This discrepancy suggests a possible error in the provided answer or question."
+  ]
+}
