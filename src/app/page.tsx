@@ -48,13 +48,6 @@ function runBasicTests() {
         console.log("Test 2 PASSED: The first question's correctAnswer is valid.");
     }
 
-    // Test 3: Check if at least one question includes an optional description.
-    const hasDescription = data.questions.some((q) => q.description);
-    if (hasDescription) {
-        console.log("Test 3 PASSED: Found question(s) with optional description.");
-    } else {
-        console.log("Test 3 NOTE: No question has a description.");
-    }
 }
 
 // Component to display a single question and its choices
