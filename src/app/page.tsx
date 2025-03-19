@@ -225,6 +225,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                             {question.explanation && (
                                 <p className="text-gray-700 text-sm mt-2">
+                                    className=
+                                    {`text-sm mt-2 ${darkMode ? "text-white" : "text-black"}`}
                                     Explanation: {question.explanation}
                                 </p>
                             )}
@@ -238,6 +240,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         checked={isMarked}
                         onCheckedChange={() => onMarkQuestion(question.id)}
                         id={`mark-${question.id}`}
+                        className="bg-white"
                     />
                     <label htmlFor={`mark-${question.id}`} className="select-none">
                         Mark this question
@@ -377,7 +380,7 @@ export default function QuizApp() {
             >
                 {/* Centered content container */}
                 <div className="max-w-4xl mx-auto p-4">
-                    <h1 className="text-3xl font-bold mb-4">LaTeX Quiz</h1>
+                    <h1 className="text-3xl font-bold mb-4">201 Final Preparation</h1>
                     <div className="flex flex-col md:flex-row gap-4 items-start">
                         {/* Lecture buttons on the left of the question box */}
                         <div
@@ -386,13 +389,13 @@ export default function QuizApp() {
                         >
                             <h2 className="font-bold mb-2">Lectures</h2>
                             <div className="flex flex-col gap-2">
-                                {lectureNumbers.map((lec) => (
+                                {lectureNumbers.map((lec, idx) => (
                                     <button
                                         key={lec}
                                         onClick={() => jumpToLecture(lec)}
                                         className={`${buttonCommon} ${buttonStyles}`}
                                     >
-                                        Lecture {lec}
+                                        {idx + 1} {lec}
                                     </button>
                                 ))}
                             </div>
@@ -423,6 +426,7 @@ export default function QuizApp() {
                                         checked={randomOrder}
                                         onCheckedChange={() => setRandomOrder(!randomOrder)}
                                         id="random-order"
+                                        className="bg-white"
                                     />
                                     <label htmlFor="random-order">Random Order</label>
                                 </div>
