@@ -216,9 +216,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             )}
 
                             {question.explanation && (
-                                <p className="text-gray-700 text-sm mt-2">
+                                <p
                                     className=
-                                    {`text-sm mt-2 ${darkMode ? "text-white" : "text-black"}`}
+                                    {`text-sm mt-2 ${darkMode ? "text-white" : "text-black"}`}>
                                     Explanation: {question.explanation}
                                 </p>
                             )}
