@@ -10,7 +10,7 @@ import data from "./data.json";
 // We'll define a type for each question.
 interface Question {
     id: string;
-    lecture: number;
+    lecture: string;
     question: string;
     choices: string[];
     correctAnswer: string | null;
