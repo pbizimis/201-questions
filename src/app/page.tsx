@@ -47,7 +47,6 @@ function runBasicTests() {
     } else {
         console.log("Test 2 PASSED: The first question's correctAnswer is valid.");
     }
-
 }
 
 // Component to display a single question and its choices
@@ -340,13 +339,11 @@ export default function QuizApp() {
         setHideAnswers(false);
     };
 
-    // Collect all unique lecture numbers from the displayedQuestions
     const lectureNumbers = Array.from(
         new Set(displayedQuestions.map((q) => q.lecture)),
-    ).sort((a, b) => a - b);
+    ).sort((a, b) => a.localeCompare(b));
 
-    // Jump to first question of a given lecture (in the displayedQuestions)
-    const jumpToLecture = (lecture: number) => {
+    const jumpToLecture = (lecture: string) => {
         const idx = displayedQuestions.findIndex((q) => q.lecture === lecture);
         if (idx !== -1) {
             setQuestionIndex(idx);
